@@ -51,16 +51,16 @@ Este projeto é uma **UI de monitoramento** que:
 
 ```properties
 # Habilitar monitoramento
-quickfixj.monitoring.enabled=true
+quickfixj-ui.monitoring.enabled=true
 
 # Intervalo de atualização (ms)
-quickfixj.monitoring.refresh-interval=5000
+quickfixj-ui.monitoring.refresh-interval=5000
 
 # Notificações WebSocket
-quickfixj.monitoring.websocket-notifications=true
+quickfixj-ui.monitoring.websocket-notifications=true
 
 # Caminhos para configurações externas (opcional)
-quickfixj.monitoring.external-config-paths=/path/to/external/configs
+quickfixj-ui.monitoring.external-config-paths=/path/to/external/configs
 ```
 
 ## 📡 API Endpoints

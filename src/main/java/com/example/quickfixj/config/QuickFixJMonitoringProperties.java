@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * Este starter é apenas para MONITORAMENTO, não cria suas próprias sessões.
  */
 @Configuration
-@ConfigurationProperties(prefix = "quickfixj.monitoring")
+@ConfigurationProperties(prefix = "quickfixj-ui.monitoring")
 public class QuickFixJMonitoringProperties {
     
     /**

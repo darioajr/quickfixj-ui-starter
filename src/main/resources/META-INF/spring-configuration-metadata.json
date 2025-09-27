@@ -1,7 +1,7 @@
 {
   "groups": [
     {
-      "name": "quickfixj.monitoring",
+      "name": "quickfixj-ui.monitoring",
       "type": "com.example.quickfixj.config.QuickFixJMonitoringProperties",
       "sourceType": "com.example.quickfixj.config.QuickFixJMonitoringProperties",
       "description": "Configuration properties for QuickFix/J session monitoring."
@@ -9,25 +9,25 @@
   ],
   "properties": [
     {
-      "name": "quickfixj.monitoring.enabled",
+      "name": "quickfixj-ui.monitoring.enabled",
       "type": "java.lang.Boolean",
       "description": "Enable QuickFix/J session monitoring.",
       "defaultValue": true
     },
     {
-      "name": "quickfixj.monitoring.refresh-interval",
+      "name": "quickfixj-ui.monitoring.refresh-interval",
       "type": "java.lang.Long",
       "description": "Monitoring refresh interval in milliseconds.",
       "defaultValue": 5000
     },
     {
-      "name": "quickfixj.monitoring.websocket-notifications",
+      "name": "quickfixj-ui.monitoring.websocket-notifications",
       "type": "java.lang.Boolean",
       "description": "Enable WebSocket notifications for session updates.",
       "defaultValue": true
     },
     {
-      "name": "quickfixj.monitoring.external-config-paths",
+      "name": "quickfixj-ui.monitoring.external-config-paths",
       "type": "java.lang.String[]",
       "description": "Paths to search for external QuickFix/J configurations.",
       "defaultValue": []

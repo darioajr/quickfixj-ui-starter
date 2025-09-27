@@ -30,7 +30,7 @@ import com.example.quickfixj.service.QuickFixJConfigReader;
  */
 @AutoConfiguration
 @EnableConfigurationProperties(QuickFixJMonitoringProperties.class)
-@ConditionalOnProperty(name = "quickfixj.monitoring.enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(name = "quickfixj-ui.monitoring.enabled", havingValue = "true", matchIfMissing = true)
 @Import({WebConfig.class, WebSocketConfig.class})
 @EnableScheduling
 public class QuickFixJAutoConfiguration {
