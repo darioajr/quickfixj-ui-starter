@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "quickfixj",
+      "type": "com.example.quickfixj.config.QuickFixJProperties",
+      "sourceType": "com.example.quickfixj.config.QuickFixJProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "quickfixj.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable QuickFix/J auto-configuration.",
+      "defaultValue": true
+    },
+    {
+      "name": "quickfixj.config-file",
+      "type": "java.lang.String",
+      "description": "Path to QuickFix/J configuration file.",
+      "defaultValue": "quickfixj.cfg"
+    },
+    {
+      "name": "quickfixj.enable-logging",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable QuickFix/J logging.",
+      "defaultValue": true
+    },
+    {
+      "name": "quickfixj.heart-beat-interval",
+      "type": "java.lang.Integer",
+      "description": "HeartBeat interval in seconds.",
+      "defaultValue": 30
+    },
+    {
+      "name": "quickfixj.sender-comp-id",
+      "type": "java.lang.String",
+      "description": "Sender CompID for FIX session.",
+      "defaultValue": "SENDER"
+    },
+    {
+      "name": "quickfixj.target-comp-id",
+      "type": "java.lang.String",
+      "description": "Target CompID for FIX session.",
+      "defaultValue": "TARGET"
+    },
+    {
+      "name": "quickfixj.socket-connect-host",
+      "type": "java.lang.String",
+      "description": "Socket connection host.",
+      "defaultValue": "localhost"
+    },
+    {
+      "name": "quickfixj.socket-connect-port",
+      "type": "java.lang.Integer",
+      "description": "Socket connection port.",
+      "defaultValue": 9876
+    }
+  ]
+}
