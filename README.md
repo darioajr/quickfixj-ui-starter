@@ -50,6 +50,12 @@ Este projeto é uma **UI de monitoramento** que:
 ### application.properties
 
 ```properties
+# Habilitar o servidor dedicado da UI
+quickfixj-ui.enabled=true
+
+# Porta HTTP dedicada para a UI (não interfere na porta da sua aplicação)
+quickfixj-ui.port=18080
+
 # Habilitar monitoramento
 quickfixj-ui.monitoring.enabled=true
 
@@ -82,7 +88,7 @@ quickfixj-ui.monitoring.external-config-paths=/path/to/external/configs
 
 ## 🖥️ Interface Web
 
-Acesse `http://localhost:8080` para a interface web que mostra:
+Acesse `http://localhost:18080` (ou a porta configurada em `quickfixj-ui.port`) para a interface web que mostra:
 
 - **Dashboard** com visão geral das sessões
 - **Sessões** com status detalhado em tempo real
@@ -128,7 +134,8 @@ Este starter funciona de forma **não invasiva** com projetos QuickFIX/J existen
 
 1. **Adicione a dependência** ao seu projeto
 2. **Configure as propriedades** (opcional)
-3. **Acesse a UI** em `http://localhost:8080`
+3. **Acesse a UI** em `http://localhost:18080` (ou na porta que você configurar em `quickfixj-ui.port`)
+    - A UI é servida por um servidor embutido próprio e não ocupa a porta da sua aplicação principal
 4. **Suas sessões aparecerão automaticamente** na interface
 
 ## 📊 Monitoramento

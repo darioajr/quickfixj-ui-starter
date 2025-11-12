@@ -17,6 +17,7 @@ import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 import quickfix.ConfigError;
@@ -24,6 +25,7 @@ import quickfix.SessionID;
 import quickfix.SessionSettings;
 
 @Service
+@ConditionalOnProperty(name = "quickfixj-ui.internal.enabled", havingValue = "true")
 public class QuickFixJConfigReader {
     
     private static final Logger logger = LoggerFactory.getLogger(QuickFixJConfigReader.class);

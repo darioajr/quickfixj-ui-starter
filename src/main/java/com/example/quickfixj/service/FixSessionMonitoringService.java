@@ -12,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.ApplicationContext;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -38,6 +39,7 @@ import quickfix.SessionID;
  * ❌ NÃO processa mensagens FIX diretamente
  */
 @Service
+@ConditionalOnProperty(name = "quickfixj-ui.internal.enabled", havingValue = "true")
 public class FixSessionMonitoringService {
 
     private static final Logger logger = LoggerFactory.getLogger(FixSessionMonitoringService.class);

@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/ui">
+    <Router>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Dashboard />} />

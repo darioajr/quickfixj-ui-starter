@@ -1,10 +1,12 @@
 package com.example.quickfixj.controller;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 
 @Controller
+@ConditionalOnProperty(name = "quickfixj-ui.internal.enabled", havingValue = "true")
 public class WebSocketController {
     
     @MessageMapping("/subscribe")

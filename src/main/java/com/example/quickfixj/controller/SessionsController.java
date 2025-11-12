@@ -3,6 +3,7 @@ package com.example.quickfixj.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import com.example.quickfixj.service.FixSessionMonitoringService;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
+@ConditionalOnProperty(name = "quickfixj-ui.internal.enabled", havingValue = "true")
 public class SessionsController {
 
     private final FixSessionMonitoringService sessionMonitoringService;

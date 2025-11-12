@@ -9,6 +9,18 @@
   ],
   "properties": [
     {
+      "name": "quickfixj-ui.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether the QuickFix/J UI server should be started.",
+      "defaultValue": true
+    },
+    {
+      "name": "quickfixj-ui.port",
+      "type": "java.lang.Integer",
+      "description": "HTTP port used by the QuickFix/J UI server.",
+      "defaultValue": 18080
+    },
+    {
       "name": "quickfixj-ui.monitoring.enabled",
       "type": "java.lang.Boolean",
       "description": "Enable QuickFix/J session monitoring.",

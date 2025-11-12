@@ -3,6 +3,9 @@ package com.example.quickfixj.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +25,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api/fix")
 @CrossOrigin(origins = "*")
 @Tag(name = "QuickFix/J Monitoring API", description = "API for monitoring QuickFix/J sessions from external projects")
+@ConditionalOnProperty(name = "quickfixj-ui.internal.enabled", havingValue = "true")
 public class FixMessageController {
     
+    private static final Logger log = LoggerFactory.getLogger(FixMessageController.class);
+
     private final FixSessionMonitoringService sessionMonitoringService;
     private final QuickFixJConfigReader configReader;
     
@@ -51,9 +57,7 @@ public class FixMessageController {
             List<SessionStatusDto> statuses = sessionMonitoringService.getSessionStatuses();
             return ResponseEntity.ok(statuses);
         } catch (Exception e) {
-            // Log do erro para debug
-            System.err.println("Erro ao buscar sessões: " + e.getMessage());
-            e.printStackTrace();
+            log.error("Erro ao buscar sessões", e);
             return ResponseEntity.internalServerError().build();
         }
     }
